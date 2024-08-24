@@ -1,7 +1,7 @@
 "use client";
 
 import { FormError } from "@/components/form-error";
-import { userCurrentRole } from "@/hooks/user-current-role";
+import { useCurrentRole } from "@/hooks/user-current-role";
 import { UserRole } from "@prisma/client";
 
 interface RoleGateProps {
@@ -10,7 +10,7 @@ interface RoleGateProps {
 }
 
 export const RoleGate = ({ children, allowedRole }: RoleGateProps) => {
-  const user = userCurrentRole();
+  const user = useCurrentRole();
 
   if (!user || user.role !== allowedRole) {
     return (

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { BeatLoader } from "react-spinners";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { CardWrapper } from "@/components/auth/card-wrapper";

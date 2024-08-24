@@ -20,7 +20,7 @@ import {
 import { SettingsSchema } from "../../../../schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
-import { userCurrentUser } from "@/hooks/user-current-user";
+import { useCurrentUser } from "@/hooks/user-current-user";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import {
@@ -34,7 +34,7 @@ import { UserRole } from "@prisma/client";
 import { Switch } from "@/components/ui/switch";
 
 const SettingsPage = () => {
-  const user = userCurrentUser();
+  const user = useCurrentUser();
 
   const [sucess, setSucess] = useState<string | undefined>();
   const [error, setError] = useState<string | undefined>();

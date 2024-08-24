@@ -24,7 +24,8 @@ import { FormError } from "@/components/form-error";
 import { FormSuccess } from "../form-success";
 import { newPassword } from "../../actions/new-password";
 import { useSearchParams } from "next/navigation";
-export function NewPasswordForm() {
+
+export const NewPasswordForm = () => {
   const searchParams = useSearchParams();
 
   const token = searchParams.get("token");
@@ -88,4 +89,4 @@ export function NewPasswordForm() {
       </CardWrapper>
     </div>
   );
-}
+};

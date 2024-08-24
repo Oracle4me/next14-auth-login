@@ -9,12 +9,12 @@ import {
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { FaUser } from "react-icons/fa";
-import { userCurrentUser } from "@/hooks/user-current-user";
+import { useCurrentUser } from "@/hooks/user-current-user";
 import { LogoutButton } from "./logout-button";
 import { ExitIcon } from "@radix-ui/react-icons";
 
 export const UserButton = () => {
-  const user = userCurrentUser();
+  const user = useCurrentUser();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
